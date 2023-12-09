@@ -1,0 +1,67 @@
+<div class="container container-fluid">
+    <div class="card card-plain">
+        <div class="card-header card-header-danger">
+            <h4 class="card-title">Cargar información de excel en datatable</h4>
+            <p class="card-category">Seleccione archivo xlsx a cargar
+            </p>
+        </div>
+        <div class="card card-body">
+            <div class="iframe-container d-none d-lg-block">
+                <input type="file" (change)="handleFileInput($event)" />
+            </div>
+        </div>
+        <div class="card card-body">
+            <div class="table-responsive">
+
+                <table datatable [dtOptions]="dtOptions" [dtTrigger]="dtTrigger" class="table table-bordered table-striped table-hover">
+                    <thead>
+                        <tr>
+                            <th>#</th>
+                            <th>#</th>
+                            <th>Ubigeo</th>
+                            <th>Departamento</th>
+                            <th>Provincias</th>
+                            <th>Distritos</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr *ngFor="let item of excelData; let i = index">
+                            <td>
+                                <a (click)="editar(i)" title="Editar" class="text-dark">
+                                    <i class="fa fa-pencil"></i>
+                                </a>
+                            </td>
+                            <td>
+                                <a (click)="eliminar(i)" title="Eliminar" class="text-dark">
+                                    <i class="fa fa-trash"></i>
+                                </a>
+                            </td>
+                            <td>
+                                <p>
+                                    {{item.Ubigeo}}
+                                </p>
+                            </td>
+                            <td>
+                                <p>
+                                    {{item.Departamento}}
+                                </p>
+                            </td>
+                            <td>
+                                <p>
+                                    {{item.Provincias}}
+                                </p>
+                            </td>
+                            <td>
+                              <p>
+                                  {{item.Distritos}}
+                              </p>
+                          </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>
+
+

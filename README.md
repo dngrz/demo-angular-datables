@@ -2,13 +2,27 @@
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 15.2.9.
 
+![Start](docs/images/01-start.jpg)
+
+![Finish](docs/images/02-load.jpg)
+
 ## Development server
 
 Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
 
 ## Code scaffolding
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+Run `ng new demo-datatables` to generate a new project.
+
+Run `ng g m layout` to generate a new module.
+
+Run `ng g c pages/data-load --module ../app/layout/layout.module --skip-tests` to generate component and add to layout module.
+
+Run `ng add angular-datatables` to add angular-datatables library.
+
+Run `ng g s service/excel --skip-tests` to generate a new excel service.
+
+Run `npm i fontawesome-4.7` to add front-awesome 4.7 icons.
 
 ## Build
 
